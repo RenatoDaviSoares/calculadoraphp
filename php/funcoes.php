@@ -16,12 +16,14 @@
 
 
         //construtor = instancia as variaveis = Dar valores iniciais 
-        public function __coletar(int $num1, int $num2){
+        public function coletar(int $num1, int $num2){
             $this->num1 = $num1;
             $this->num2 = $num2;
 
-
         }//fim do coletar
+
+
+        //APENAS GET E SET USAM DOIS UNDERLINES
 
         //metodos modificadores(SET) e acesso(GET)
         public function __get(string $dados):mixed 
@@ -40,28 +42,32 @@
         public function somar(){
             //usando a função SET
             $this->resultado = $this->num1 + $this->num2;
+            return "<br>A soma do $this->num1 e do $this->num2 é: $this->resultado <br>";
             
         }//fim do metodo somar 
 
         public function subtrair(){
             $this->resultado = $this->num1 - $this->num2;
-
+            return $this->resultado;
+            return "<br>A subtração do $this->num1 menos $this->num2 é: $this->resultado <br>";
         }
 
         public function multiplicar(){
             $this->resultado = $this->num1 * $this->num2 ;
-
+            return $this->resultado;
+            return "<br>A multiplicação do $this->num1 vezes $this->num2 é: $this->resultado <br>";
         }
 
         public function dividir(){
             if($this->num2 <= 0)
             {
-                $this->resultado = "Impossível dividir por zero!";
+                return "Impossivel dividir por zero!";
             }
             else
             {
             $this->resultado = $this->num1 / $this->num2;
-            }
+            } 
+            return "<br>A divisão do $this->num1 dividio por $this->num2 é: $this->resultado <br>";
         }//fim do dividir
 
 
