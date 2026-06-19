@@ -22,7 +22,12 @@
         <a href="telas/multiplicar.php" class="btn btn-primary">Multiplicar</a>
 
         <a href="telas/dividir.php" class="btn btn-primary">Dividir</a>
-    
+
+        <a href="telas/segundoGrau.php" class="btn btn-primary">Segundo Grau</a>
+
+        <a href="telas/imc.php" class="btn btn-primary">IMC</a>
+
+        <a href="telas/areaRetangulo.php" class="btn btn-primary">Área de Retangulo</a>
 
     </form>
 </body>

@@ -4,7 +4,8 @@
     class Funcao{
         //encapsulamento = evitar que outras classwes do projeto acessem diretamente as suas variaveis
         private int $num1 ;
-        private int $num2 ; 
+        private int $num2 ;
+        private int $num3 ; 
         private int $resultado ; 
 
 
@@ -24,12 +25,11 @@
 
 
         //APENAS GET E SET USAM DOIS UNDERLINES
-
+        
         //metodos modificadores(SET) e acesso(GET)
         public function __get(string $dados):mixed 
         {
             return $this->dados;
-
         }//fim do get
 
         public function __set(string $variavel, string $novoDado):void 
@@ -71,6 +71,45 @@
         }//fim do dividir
 
 
+        public function baskara(int $a, int $b, int $c){
+            $delta = pow($b, 2) - 4 * $a * $c ;
+
+            if($delta < 0){
+                return "Impossível calcular X1 e X2 de delta negativo, valor do delta: $delta";
+            }else {
+                $x1 = (-$b + sqrt($delta)) / (2 * $a);
+                $x2 = (-$b - sqrt($delta)) / (2 * $a);
+                return "<br>Delta; $delta<br>: $x1<br1>X2: $x2";              
+            }
+        }
+
+        public function imc(float $peso, float $altura){
+            $resultado = $peso / ($altura * $altura);
+            if($resultado < 0){
+                return "Impossivel calcular IMC de números negativos";
+            }else if($resultado <= 18.5){
+                return "Você é abaixo do peso";
+            }else if($resultado > 18.6 || $resultado < 24.9){
+                return "Você é peso normal";
+            }else if($resultado > 25.0 || $resultado < 29.9 ){
+                return "Você é gordão parte 1";
+            }else if($resultado > 30.0 || $this->resultado < 34.9){
+                return "Você é gordão parte 2";
+            }else if($resultado > 35.0 || $resultado > 39.9){
+                return "você é gordão parte 3";
+            }else if($resultado > 40.0){
+                return "VOCÊ É MUITO GORDO MANÉKKKKKKKK";
+            }
+        }
+
+        public function areaRetangulo(float $altura, float $largura){
+            $resultado = $altura * $largura;
+            if($altura <= 0 || $largura <= 0){
+                return "Valores não podem ser zero!";
+            }else {
+                return "a Área do retangulo é: $resultado";
+            }
+        }
 
     }//fim da classe
 
