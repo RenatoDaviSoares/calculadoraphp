@@ -89,13 +89,13 @@
                 return "Impossivel calcular IMC de números negativos";
             }else if($resultado <= 18.5){
                 return "Você é abaixo do peso";
-            }else if($resultado > 18.6 || $resultado < 24.9){
+            }else if($resultado > 18.6 && $resultado < 24.9){
                 return "Você é peso normal";
-            }else if($resultado > 25.0 || $resultado < 29.9 ){
-                return "Você é gordão parte 1";
-            }else if($resultado > 30.0 || $this->resultado < 34.9){
+            }else if($resultado > 25.0 && $resultado < 29.9 ){
+                return "Você é gordão";
+            }else if($resultado > 30.0 && $resultado < 34.9){
                 return "Você é gordão parte 2";
-            }else if($resultado > 35.0 || $resultado > 39.9){
+            }else if($resultado > 35.0 && $resultado > 39.9){
                 return "você é gordão parte 3";
             }else if($resultado > 40.0){
                 return "VOCÊ É MUITO GORDO MANÉKKKKKKKK";
@@ -108,6 +108,99 @@
                 return "Valores não podem ser zero!";
             }else {
                 return "a Área do retangulo é: $resultado";
+            }
+        }
+
+        public function areaTriangulo(float $altura, float $base){
+            $resultado = ($altura * $base) / 2;
+            if($altura <= 0 || $base <= 0){
+                return "Valores não podem ser zero!";
+            }else {
+                return "a Área do retangulo é: $resultado";
+            }
+        }
+
+        public function calcularImposto ( float $valor){
+
+        $resultado = (18 / 100) * $valor;
+        if($valor <= 0){
+            return "Impossivel calcular imposto de um valor de produto negativo ";
+        } else{
+            return "o valor do imposto é: $resultado";
+        }
+    }
+
+        public function calcularIdade (int $ano){
+            $resultado = $ano * 365;
+            if($ano <= 0){
+                return "O calculo de dias não pode ser feito com números negativos";
+            }else{
+                return "A sua idade em dias é: $resultado";
+            }
+        }
+
+        public function dobrarValor(float $num1){
+            $resultado = $num1 * 2;
+            if($num1 <= 0){
+                return "Não há valor dobrado de zero";
+            } else{
+                return "O seu valor em dobro é: $resultado";
+            }
+        }
+
+        public function media(float $primeiro, float $segundo, float $terceiro){
+            $resultado = ($primeiro + $segundo + $terceiro) / 3;
+            return "A sua media é: $resultado";
+        }
+
+        public function calcularRaiz(float $valor){
+            $resultado = $valor * $valor;
+            if($valor < 0){
+               return "Não há raiz quandrada de número negativo";
+            }
+            else{
+                return "A raiz quadrada de $valor é $resultado";
+            }
+        }
+        
+        public function conversaoCm(float $valor){
+            $resultado = $valor * 100;
+            if($valor <= 0){
+                return "Não é possivel converter números negativos";
+            }else {
+                return "A sua conversão de metros para centimetros é: $resultado";
+            }
+        }
+
+        public function raio(float $valor){
+            $resultado =  pi() * pow($valor, 2); 
+            if($valor <= 0){
+                return "Não é possivel ver area de circulo com número negativo";
+            }else{
+                return "A área do seu circulo é:  $resultado";
+            }
+        }
+
+        public function temperatura(float $valor){
+            $resultado = $valor * 1.8 + 32;
+            return "A temperatura de celsius para fahrenheit é: $resultado";
+        }
+
+        public function converterIdade(int $valor){
+            $resultado = $valor * 12;
+            if($valor <= 0){
+                return "Não é possivel converter números negativos";
+            } else {
+                return "A sua idade em meses é: $resultado";
+            }
+        }
+
+        public function calcularDesconto (float $valor){
+            $resultado = (10 / 100) * $valor - $valor;
+            if($valor <= 0){
+                return "Não é possivel calcular o desconto com valor do produto negativo";
+            } else{
+                return ""
             }
         }
 

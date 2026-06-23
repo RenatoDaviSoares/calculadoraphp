@@ -28,6 +28,26 @@
         <a href="telas/imc.php" class="btn btn-primary">IMC</a>
 
         <a href="telas/areaRetangulo.php" class="btn btn-primary">Área de Retangulo</a>
+        
+        <a href="telas/areaTriangulo.php" class="btn btn-primary">Área de Triangulo</a>
+
+        <a href="telas/imposto.php" class="btn btn-primary">Imposto</a>
+
+        <a href="telas/idade.php" class="btn btn-primary">Idade em dias</a>
+
+        <a href="telas/dobro.php" class="btn btn-primary">Dobro</a>
+
+        <a href="telas/calcularMedia.php" class="btn btn-primary">Media</a>
+
+        <a href="telas/raiz.php" class="btn btn-primary">Raiz</a>
+        
+        <a href="telas/conversao.php" class="btn btn-primary">Conversão</a>
+        
+        <a href="telas/areaCirculo.php" class="btn btn-primary">Calcular Circulo</a>
+    
+        <a href="telas/calcularTemperatura.php" class="btn btn-primary">Temperatura</a>
+
+        <a href="telas/idadeMeses.php" class="btn btn-primary">Idade em meses</a>
 
     </form>
 </body>
