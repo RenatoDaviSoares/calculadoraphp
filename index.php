@@ -49,6 +49,16 @@
 
         <a href="telas/idadeMeses.php" class="btn btn-primary">Idade em meses</a>
 
+        <a href="telas/desconto.php" class="btn btn-primary">Desconto</a>
+
+        <a href="telas/impar.php" class="btn btn-primary">Par ou Impar</a>
+
+        <a href="telas/calcularVolume.php" class="btn btn-primary">Calcular Volume</a>
+
+        <a href="telas/cubo.php" class="btn btn-primary">Calcular Potencias</a>
+
+        <a href="telas/velocidadeMedia.php" class="btn btn-primary">Calcular Velocidade Média</a>
+
     </form>
 </body>
 </html>

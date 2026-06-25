@@ -196,12 +196,38 @@
         }
 
         public function calcularDesconto (float $valor){
-            $resultado = (10 / 100) * $valor - $valor;
+            $resultado =  0.90 * $valor ;
             if($valor <= 0){
                 return "Não é possivel calcular o desconto com valor do produto negativo";
             } else{
-                return ""
+                return "O valor do produto com 10% de desconto é: $resultado";
             }
+        }
+
+        public function par ($valor){
+            $resultado = $valor;
+            if($valor % 2 == 0){
+            return "O seu número é par";
+            } else if($valor % 2 <> 0){
+                return "O seu número é impar";
+            }
+        }
+
+        public function volume(float $largura, float $comprimento, float $altura){
+            $resultado = $largura * $comprimento * $altura;
+            if($largura <= 0 || $comprimento <= 0 || $altura <= 0 ){
+                return "É impossivel calcular volume com valores negativos";
+            } else{
+                return "O volume de sua caixa é: $resultado";
+            }
+        }
+
+        public function quadrado($valor){
+            return "O resultado do valor ao quadrado é: ". $valor = pow($valor, 2) ." e o valor ao cubo é: ". ($valor * $valor) * $valor;
+        }
+
+        public function velocidade(float $distancia, float $tempo){
+            return "A distancia é $distancia e o tempo gasto é $tempo e a velocidade media é: ". $distancia / $tempo ;
         }
 
     }//fim da classe
